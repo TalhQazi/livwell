@@ -6,21 +6,11 @@ interface ProgressCircleProps {
   target: number;
 }
 
-export const ProgressCircle = ({
-  progress,
-  current,
-  target,
-}: ProgressCircleProps) => {
+export const ProgressCircle = ({ progress, current }: ProgressCircleProps) => {
   return (
     <div className="h-56 relative">
       <ResponsiveContainer width="100%" height="100%">
-        <RadialBarChart
-          innerRadius="80%"
-          outerRadius="100%"
-          data={[{ value: progress }]}
-          startAngle={90}
-          endAngle={-270}
-        >
+        <RadialBarChart innerRadius="80%" outerRadius="100%" data={[{ value: progress }]} startAngle={90} endAngle={-270}>
           <RadialBar background dataKey="value" fill={"hsl(var(--primary))"} />
         </RadialBarChart>
       </ResponsiveContainer>
