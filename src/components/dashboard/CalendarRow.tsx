@@ -22,16 +22,26 @@ export const CalendarRow = ({
   const dates = Array.from({ length: 7 }, (_, i) => addDays(weekStart, i));
 
   return (
-    <div className="flex items-center justify-between mb-8">
-      <Button
-        variant="ghost"
-        size="icon"
-        onClick={onPreviousWeek}
-        className="hidden sm:flex"
-      >
-        <ChevronLeft className="h-4 w-4" />
-      </Button>
-      <div className="flex justify-between flex-1 px-4">
+    <div className="flex flex-col mb-8 gap-2 items-end w-full">
+      <div className="flex gap-2">
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={onPreviousWeek}
+          className="hidden sm:flex h-6 w-6"
+        >
+          <ChevronLeft />
+        </Button>
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={onNextWeek}
+          className="hidden sm:flex h-6 w-6"
+        >
+          <ChevronRight />
+        </Button>
+      </div>
+      <div className="flex justify-between flex-1 px-4 w-full">
         {dates.map((date) => (
           <CalendarDay
             key={date.toISOString()}
@@ -43,14 +53,6 @@ export const CalendarRow = ({
           />
         ))}
       </div>
-      <Button
-        variant="ghost"
-        size="icon"
-        onClick={onNextWeek}
-        className="hidden sm:flex"
-      >
-        <ChevronRight className="h-4 w-4" />
-      </Button>
     </div>
   );
 };

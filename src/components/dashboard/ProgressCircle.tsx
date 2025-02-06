@@ -25,10 +25,7 @@ export const ProgressCircle = ({
         </RadialBarChart>
       </ResponsiveContainer>
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="text-center">
-          <div className="text-lg font-semibold">{current} Km</div>
-          <div className="text-sm text-muted-foreground">of {target} Km</div>
-        </div>
+        <div className="text-lg font-semibold text-center">{current} Km</div>
       </div>
     </div>
   );

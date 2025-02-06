@@ -14,7 +14,12 @@ export const ActivityGraph = ({ points }: ActivityGraphProps) => {
             dataKey="y"
             stroke={"hsl(var(--primary))"}
             strokeWidth={2}
-            dot={false}
+            dot={{
+              fill: "hsl(var(--primary))",
+            }}
+            activeDot={{
+              r: 6,
+            }}
           />
         </LineChart>
       </ResponsiveContainer>
