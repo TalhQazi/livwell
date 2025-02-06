@@ -37,7 +37,7 @@ export default function DashboardPage() {
   return (
     <div className="px-2 sm:px-6 py-8  space-y-8">
       <div className="flex gap-4 flex-wrap-reverse mx-auto ">
-        <div className="space-y-4 flex-grow-[1] min-w-[32rem] flex flex-col justify-between">
+        <div className="space-y-4 flex-grow-[1] md:min-w-[32rem] flex flex-col justify-between">
           <WalkActivityCard isLoading={isLoading} data={data?.walkActivity} />
 
           <ActivityCardsContainer
